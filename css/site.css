@@ -1,0 +1,544 @@
+:root {
+    --cream: #f6f3ea; /**/
+    --paleRed: #ec9998; /**/
+    --deepRed: #e24349; /**/
+    --sweetPink: #ffcacf; /**/
+    --redPink: #ff5766; /**/
+    --lilacBrush: #84b2f5; /**/
+    --oatmeal: #f8f4ec; /**/
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url('font/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('font/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'JosefinSans';
+    src: url('font/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, /*0 0 0 0.25rem #258cfb;*/
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    margin-top: 100px;
+    background: var(--oatmeal);
+}
+input {
+    border-color: var(--redPink);
+    border-width: 2px;
+    background-color: var(--cream);
+    color: var(--redPink);
+}
+
+input:active {
+    border-color: var(--oatmeal);
+}
+
+textarea {
+    border-color: var(--redPink);
+    border-width: 2px;
+    background-color: var(--cream);
+    color: var(--redPink);
+}
+
+div {
+    font-family: Josefin Sans;
+    font-size: 30px;
+    color: var(--deepRed)
+}
+
+.fullPage {
+    min-width: 90%;
+    min-height: 100%;
+    align-content:center;
+}
+
+.center {
+    margin: auto;
+    max-width: 90%;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.subtext {
+    color: var(--redPink);
+    font-family: BebasNeue;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+
+.borderImg {
+    height: 150px;
+    max-height: 10vw;
+    margin: 10px;
+    object-fit: contain;
+    /*border: 5px solid var(--redPink);*/
+}
+
+.articleImg {
+    height: contain;
+    margin: 10px;
+    object-fit: contain;
+    /*border: 5px solid var(--redPink);*/
+}
+
+
+.rectangle {
+    width: 300px;
+    height: 400px;
+    max-width: 300px;
+    max-height: 400px;
+}
+
+
+.hiddenscroll::-webkit-scrollbar {
+    display: none;
+}
+
+.hiddenscroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 80%;
+    height:90%;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    height:50px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+    min-height: 60px;
+    align-content: start;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;
+    background-color: var(--redPink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerLink {
+    color: var(--sweetPink);
+    font-family: Josefin Sans;
+    font-size: 20px;
+}
+
+    .footerLink:hover {
+        font-size: 120%;
+        color: var(--sweetPink);
+    }
+
+h1 {
+    color: var(--redPink);
+    font-family: Josefin Sans;
+    font-size: 60px;
+}
+
+h2 {
+    color: var(--redPink);
+    font-family: Josefin Sans;
+    font-size: 45px;
+}
+
+h3 {
+    color: var(--redPink);
+    font-family: Josefin Sans;
+    font-size: 30px;
+}
+
+h4 {
+    color: var(--redPink);
+    font-family: Quicksand;
+    font-size: 20px;
+}
+
+h5 {
+    color: var(--sweetPink);
+    font-family: Quicksand;
+    font-size: 20px;
+}
+
+ul {
+    list-style-type:none
+}
+
+.outlinedText {
+    color: var(--redPink);
+    font-family: Josefin Sans;
+    font-size: 45px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 var(--sweetPink), 1px -1px 0 var(--sweetPink), 1px 1px 0 var(--sweetPink), -1px 1px 0 var(--sweetPink)
+}
+
+nav {
+    background-color: var(--oatmeal);
+    /*    background: repeating-linear-gradient(90deg, var(--redPink), var(--redPink) 2px, var(--sweetPink) 0px, var(--sweetPink) 20px);*/
+    color: var(--redPink);
+    font-family: Quicksand;
+    font-size: 40px;
+}
+
+a {
+    color: var(--paleRed);
+    font-family: Quicksand;
+    font-size: 40px;
+}
+
+    a:visited {
+        color: var(--paleRed);
+        font-family: Quicksand;
+        font-size: 40px;
+    }
+
+    a:hover {
+        color: var(--paleRed);
+        font-family: Quicksand;
+        font-size: 40px;
+    }
+
+button {
+    color:var(--paleRed);
+    border:0px;
+    background-color:var(--redPink);
+    border-radius:20px;
+    height:60px;
+}
+
+button:hover{
+    border:5px;
+    border-color:var(--deepRed);
+    color:var(--cream);
+}
+button:active{
+    background-color:var(--deepRed);
+    color:var(--redPink);
+}
+
+button:visited{
+    color:var(--sweetPink);
+}
+button:focus {
+    color: var(--sweetPink);
+}
+
+.navButton {
+    color: var(--paleRed);
+    border: 0px;
+    background-color: var(--redPink);
+    border-radius: 20px;
+    height: 60px;
+}
+
+    .navButton:hover {
+        border: 5px;
+        border-color: var(--deepRed);
+        color: var(--cream);
+    }
+
+    .navButton:active {
+        background-color: var(--deepRed);
+        color: var(--redPink);
+    }
+
+    .navButton:visited {
+        color: var(--redPink);
+    }
+
+    .navButton:focus {
+        color: var(--redPink);
+    }
+
+.invisibleButton{
+    color:var(--paleRed);
+    border:0px;
+    background-color:transparent;
+}
+    .invisibleButton:hover {
+        border: 0px;
+        background-color: transparent;
+    }
+    .invisibleButton:active {
+        border: 0px;
+        background-color: transparent;
+    }
+    .invisibleButton:active {
+        color: var(--paleRed);
+    }
+
+
+/*#region NavLink*/
+.nav-link {
+    animation: button-in 0.25s forwards button-in;
+    -webkit-animation: linear;
+    -webkit-animation-name: button-in;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: forwards;
+    color: var(--redPink);
+    font-size: 30px;
+}
+
+    .nav-link:hover {
+        transform: scale(1.1);
+        transform: translateY(10);
+        color: var(--redPink);
+    }
+
+    .nav-link:visited {
+        color: var(--redPink);
+    }
+
+    .nav-link:focus {
+        color: var(--redPink);
+    }
+
+/*#endregion*/
+/*#region Posters*/
+.poster {
+    width: 400px;
+    height: contain;
+    margin: 10px;
+    object-fit: contain;
+    /*border: 5px solid var(--redPink);*/
+    max-width: 80vw;
+}
+
+    .poster:hover {
+        transform: scale(1.1);
+    }
+
+.cardposter {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    object-fit: contain;
+    display: block;
+}
+
+.miniposter {
+    width: 100px;
+    height: contain;
+    margin: 10px;
+    object-fit: contain;
+    /*border: 5px solid var(--redPink);*/
+}
+
+.posterLink {
+    text-decoration: none;
+    -webkit-animation: linear;
+    -webkit-animation-name: button-in;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation: button-in 0.5s forwards button-in;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.miniposter:hover {
+        transform: scale(1.2);
+        transform: translateY(10);
+    }
+/*#endregion*/
+/*#region Flip Cards*/
+
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    margin: 15px;
+    padding: 0px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color:var(--sweetPink);
+   /* border: 1px solid #808080;*/
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    padding:0px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/*.flip-card:focus .flip-card-inner:focus {
+    transform: rotateY(180deg);
+}*/
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.flip-card-front {
+    /*border: 1px solid #808080;*/
+    align-content:center;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    align-content: center;
+}
+
+/*#endregion*/
+
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Stay on top */
+    top: 50px;
+    left: 0;
+    background-color: var(--oatmeal); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    align-self: center;
+    justify-self: center;
+    color: var(--sweetPink);
+    user-select: none;
+    pointer-events: none;
+}
+
+.textOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    color: var(--redPink);
+    user-select: none;
+    pointer-events: none;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 4cqw;
+    line-height: 30px;
+}
+
+.posterLink:hover .overlay {
+    opacity: 1;
+}
+
+.pinkCard {
+    width: min(400px, 20vw);
+    height: min(400px, 20vw);
+    background-color: var(--sweetPink);
+    align-content: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    /*font-size:min(50%,3vw,3vh)*/
+    overflow: hidden;
+    font-size: 2cqw;
+}
+
+    /* The sidebar links */
+/*    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }*/
+
+        /* When you mouse over the navigation links, change their color */
+/*        .sidebar a:hover {
+            color: #f1f1f1;
+        }*/
+
+    /* Position and style the close button (top right corner) */
+/*    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }*/
+
+/* The button used to open the sidebar */
+/*.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+    .openbtn:hover {
+        background-color: #444;
+    }*/
+/*#endregion*/
