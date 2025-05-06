@@ -1,6 +1,28 @@
+<html lang="en">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food On Film</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'>
     <link rel="stylesheet" href="css/site.css">
 </head>
+<body>
+    <header style="align-self:start;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm mb-0 p-0">
+            <div>
+                <button class="invisibleButton nav-link navButton" onmouseover="openNav()" id="logoNav" onclick="toggleNav()">
+                    <img src="~/image/logo.png" width="50" height="50" style="object-fit: contain;" />
+                    Food On Film
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <center>
+        <div class="fullPage container center" id="page" style="opacity:0;" onmouseover="closeNav()">
+            <main role="main">
+                <h1>Title</h1>
 <div>
     <div>
         <div style="height:5%"></div>
@@ -63,3 +85,82 @@
         <div style="height:5%"></div>
     </div>
 </div>
+
+            </main>
+        </div>
+    </center>
+    <footer>
+        <div style="display:inline-flex; align-content:center; justify-content:center; margin:10px">
+            <h5>
+                Food On Film -
+                <a href="~/Contact" class="footerLink">Enquiries</a>
+            </h5>
+        </div>
+        <div style="margin:10px">
+            <a class="nav-link" href="https://www.instagram.com/foodon_film/" target="_blank">
+                <img src="image/Other/Instagram.png" height="40" width="40" />
+            </a>
+        </div>
+    </footer>
+    <div id="mySidebar" class="sidebar">
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="~/Index">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="~/Services">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="~/AboutUs">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="~/Filmography">Filmography</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"href="~/Contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    var opacity = 0;
+    var intervalID = 0;
+    var navOpen = false;
+    window.onload = fadeout;
+    function fadeout() {
+        setInterval(hide, 50);
+    }
+    function hide() {
+        var body = document.getElementById("page");
+        opacity =
+            Number(window.getComputedStyle(body).getPropertyValue("opacity"))
+
+        if (opacity < 1) {
+            opacity += 0.1;
+            body.style.opacity = opacity
+        }
+        else {
+            clearInterval(intervalID);
+        }
+    }
+
+    function toggleNav(){
+        if (navOpen) {
+            closeNav();
+        }
+        else { 
+            openNav();
+        }
+    }
+
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "300px";
+        navOpen = true;
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        navOpen = false;
+    }
+</script>
